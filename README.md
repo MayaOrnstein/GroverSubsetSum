@@ -14,6 +14,8 @@ Grover's algorithm is an quantum algorithm that, through a series of reflections
 
 ## Implementation
 
+The implementation is done in more detail [here](building_the_circuit.ipynb)
+
 Of note, here I implement Grover's algorithm to answer the subset sum problem using only NOT, CNOT, TOFELLI, and HADAMARD gates.
 
 To do this I first implemented an adder as outlined in [https://arxiv.org/pdf/quant-ph/0410184].
@@ -50,6 +52,9 @@ Input set: \[1,2,8,-2, 4, 6\] with target 6
 
 ![6 value test](assets/6valIncorrect.png)
 
+That said, the algorith will still work most of the time:
+
+![6 value test](assets/6valCor.png)
 
 
 
