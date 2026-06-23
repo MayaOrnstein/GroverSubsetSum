@@ -4,14 +4,12 @@
 
 ### The subset Sum Problem
 
-..math
 The Subset Sum problem is the decision problem, where given a set of $n$ values $x_i$ and a target value $t$, is there a collection of indicies $I \subseteq [n]$ such that $\sum_{i\in I}x_i = t$?
 
 The Subset sum problem is an NP-complete problem and it is interesting to ask how we might use quatum computing to solve this question.
 
 ### Grover's Algorithm
 
-..math
 Grover's algorithm is an quantum algorithm that, through a series of reflections, solves the unstructured search problem (identifying a marked value) in $\mathcal{O}(\sqrt{n})$ quantum gates.
 
 ## Implementation
@@ -24,7 +22,6 @@ This adder uses two building block
 
 ![MAJ gate](assets/maj_gate.png)  ![UMA gate](assets/uma_gate.png)
 
-..math
 which can be combined to create an adder $|ab0\rangle \to |as0\rangle$
 
 ![An adder for two 5-qubit inputs modulo 2^5](assets/adder.png)
@@ -41,17 +38,17 @@ Here are a few examples of the output of the algorithm apllied to $|00 \ldots 0\
 
 Input set: \[1,2,8,-2\] with target 6
 
-![assets/4val.png]
+![4 value test](assets/4val.png)
 
 Input set: \[1,2,8,-2, 4\] with target 6
 
-![assets/5val.png]
+![5 value test](assets/5val.png)
 
 Though, we can see that having too many solution can mess with how Grover's algorithm handles reflections:
 
 Input set: \[1,2,8,-2, 4, 6\] with target 6
 
-![assets/6valIncorrect.png]
+![6 value test](assets/6valIncorrect.png)
 
 
 
