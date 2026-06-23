@@ -22,12 +22,12 @@ To do this I first implemented an adder as outlined in [https://arxiv.org/pdf/qu
 
 This adder uses two building block
 
-![](./assets/maj_gate.pdf)  ![](./assets/uma_gate.pdf)
+![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/maj_gate.pdf)  ![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/uma_gate.pdf)
 
 ..math
 which can be combined to create an adder $|ab0\rangle \to |as0\rangle$
 
-![](assets/adder.pdf)
+![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/adder.pdf)
 
 By running the adder on numbers represented in two's complement, we can include negative numbers as inputs (as long as all values use at most $d-1$ bits
 
