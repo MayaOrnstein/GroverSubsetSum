@@ -22,34 +22,42 @@ To do this I first implemented an adder as outlined in [https://arxiv.org/pdf/qu
 
 This adder uses two building block
 
-![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/maj_gate.pdf)  ![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/uma_gate.pdf)
+![MAJ gate](assets/maj_gate.png)  ![UMA gate](assets/uma_gate.png)
 
 ..math
 which can be combined to create an adder $|ab0\rangle \to |as0\rangle$
 
-![An Adder](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/adder.png)
-Referenced locally
-![An Adder](assets/adder.png)
+![An adder for two 5-qubit inputs modulo 2^5](assets/adder.png)
 
 By running the adder on numbers represented in two's complement, we can include negative numbers as inputs (as long as all values use at most $d-1$ bits
 
 The Majority gate can also be used to implement a multiple controlled Z gate (mcz) which can be useful for the reflections in both the oracle and the diffuser when implementing Grover's algorithm
 
-TODO MCZ image
+![MCZ Gate](assets/mcz_gate.png)
 
 ## Testing
 Here are a few examples of the output of the algorithm apllied to $|00 \ldots 0\rangle$
 
-TODO
 
-Input set: \[1,2,3\] with target t
+Input set: \[1,2,8,-2\] with target 6
 
-Input set: \[1,2,3\] with target t
-Input set: \[1,2,3\] with target t
-Input set: \[1,2,3\] with target t
+![assets/4val.png]
+
+Input set: \[1,2,8,-2, 4\] with target 6
+
+![assets/5val.png]
+
+Though, we can see that having too many solution can mess with how Grover's algorithm handles reflections:
+
+Input set: \[1,2,8,-2, 4, 6\] with target 6
+
+![assets/6valIncorrect.png]
+
+
+
 
 ## Benchmarking
 
 I ran some benchmarking with various number input values and various sizes of input values. The result can be summarized as follows:
 
-![](assets/benchmark_large.pdf)
+![Benchmarking](assets/benchmark_large.png)
