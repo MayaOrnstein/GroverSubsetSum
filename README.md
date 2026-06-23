@@ -27,7 +27,9 @@ This adder uses two building block
 ..math
 which can be combined to create an adder $|ab0\rangle \to |as0\rangle$
 
-![](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/adder.pdf)
+![An Adder](https://github.com/MayaOrnstein/GroverSubsetSum/blob/main/assets/adder.png)
+Referenced locally
+![An Adder](assets/adder.png)
 
 By running the adder on numbers represented in two's complement, we can include negative numbers as inputs (as long as all values use at most $d-1$ bits
 
